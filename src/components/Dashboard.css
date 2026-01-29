@@ -1,0 +1,169 @@
+.dashboard {
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+/* Header */
+.header {
+  background: #1e40af;
+  color: white;
+  padding: 24px 32px;
+}
+.header h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
+.header p {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+/* Stats row */
+.stats {
+  display: flex;
+  gap: 16px;
+  padding: 20px 32px;
+  flex-wrap: wrap;
+}
+.stat-card {
+  background: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  min-width: 140px;
+}
+.stat-num {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+.stat-label {
+  font-size: 12px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  gap: 12px;
+  padding: 0 32px 16px;
+}
+.search-input {
+  flex: 1;
+  max-width: 300px;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.2);
+}
+.export-btn {
+  padding: 10px 20px;
+  background: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.export-btn:hover {
+  background: #1e3a8a;
+}
+
+/* Grid */
+.grid-container {
+  padding: 0 32px 32px;
+}
+
+/* Cell styles */
+.email-link {
+  color: #2563eb;
+  text-decoration: none;
+}
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.salary {
+  color: #059669;
+  font-weight: 600;
+}
+
+.rating-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.rating-bar-bg {
+  flex: 1;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.rating-bar {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.badge.active {
+  background: #dcfce7;
+  color: #166534;
+}
+.badge.inactive {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.skills {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.skill {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header, .stats, .toolbar, .grid-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .stats {
+    gap: 10px;
+  }
+  .stat-card {
+    min-width: calc(50% - 10px);
+    padding: 12px 16px;
+  }
+  .stat-num {
+    font-size: 22px;
+  }
+  .toolbar {
+    flex-direction: column;
+  }
+  .search-input {
+    max-width: none;
+  }
+}
